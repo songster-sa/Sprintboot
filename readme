@@ -1,0 +1,8 @@
+
+http://localhost:8080/batch/api/v1/
+-------------------------------------------------------------------------------------------
+concepts
+1. batch started on server start : unless u give spring.batch.job.enabled = false
+2. A step will run until your ItemReader returns null.
+3. data source needs to be defined with the same prefix
+4. start via API or schedule
