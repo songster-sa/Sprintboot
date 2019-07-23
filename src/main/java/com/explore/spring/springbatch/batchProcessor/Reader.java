@@ -7,13 +7,13 @@ import org.springframework.batch.item.UnexpectedInputException;
 
 public class Reader implements ItemReader<String> {
 
-    private int count = 0;
+    private int count = 10;
 
     @Override
     public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-        if (count == 0) {
-            count++;
-            return "inside reader";
+        if (count != 0) {
+            count--;
+            return count + " inside reader";
         } else {
             return null;
         }
